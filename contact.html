@@ -1,0 +1,146 @@
+<!DOCTYPE>
+
+<?php 
+session_start();
+include("functions/functions.php");
+
+?>
+<html>
+	<head>
+		<title>CONTACT MAGATO SHOP</title>
+		
+		
+	<link rel="stylesheet" href="styles/style2.css" media="all" /> 
+	</head>
+	
+<body>
+	
+	<!--Main Container starts here-->
+	<div class="main_wrapper">
+	
+		<!--Header starts here-->
+		<div class="header_wrapper">
+		
+			<a href="index.php"><img id="logo" src="images/logo.gif" /> </a>
+			<img id="banner" src="images/ad_banner.gif" />
+		</div>
+		<!--Header ends here-->
+		
+		<!--Navigation Bar starts-->
+		<div class="menubar">
+			
+			<ul id="menu">
+				<li><a href="index.php">Home</a></li>
+				<li><a href="all_products.php">All Products</a></li>
+				<li><a href="customer/my_account.php">My Account</a></li>
+				<li><a href="#">Sign Up</a></li>
+				<li><a href="cart.php">Shopping Cart</a></li>
+				<li><a href="#">Contact Us</a></li>
+			
+			</ul>
+			
+			<div id="form">
+				<form method="get" action="results.php" enctype="multipart/form-data">
+					<input type="text" name="user_query" placeholder="Search a Product"/ > 
+					<input type="submit" name="search" value="Search" />
+				</form>
+			
+			</div>
+		
+            
+            <!--Navigation Bar ends-->
+	
+		    <!--Content wrapper starts-->
+		<div class="content_wrapper">
+		
+			<div id="sidebar">
+			
+			<div id="sidebar_title">Categories</div>
+				
+				<ul id="cats">
+                    
+				<?php getCats(); ?>
+                    
+				<ul>
+					
+				<div id="sidebar_title">Type</div>
+				
+				<ul id="cats">
+					
+				<?php getTypes(); ?>
+				
+				<ul>
+			</div>
+		
+			<div id="content_area">
+                
+			
+<!-- for ajax-->			
+				<div id="contact_form">
+				    
+<form id="contact" name="contact" method="post">  
+  <fieldset>  
+    <label for="name" id="name">Name<span class="required">*</span></label>
+    <input type="text" name="name" id="name" size="30" value="" required/>
+
+    <label for="email" id="email">Email<span class="required">*</span></label>
+    <input type="text" name="email" id="email" size="30" value="" required/><br>
+
+    <label for="Message" id="message">Message<span class="required">*</span></label>
+    <textarea name="message" id="message" required></textarea><br>
+
+    <label for="Captcha" id="captcha">Name the small house pet that says "<i>meow</i>"<span class="required">*</span></label>
+    <input type="text" name="captcha" value="" required/>
+
+    <input id="submit" type="submit" name="submit" value="Send" />  
+  </fieldset>  
+</form>
+
+<div id="success">
+  <span>
+    <p>Your message was sent succssfully! I will be in touch as soon as I can.</p>
+  </span>
+</div>
+
+<div id="error">
+  <span>
+    <p>Something went wrong, try refreshing and submitting the form again.</p>
+  </span>
+</div>
+
+
+				
+				
+				</div>
+<!--fin-->
+                    
+			
+			
+		</div>
+		  
+                    <!--Content wrapper ends-->
+		
+	
+		
+		<div id="footer">
+		
+		<h2 style="text-align:center; padding-top:30px;">&copy; 2016 STUDIO MAGATO</h2>
+		
+		</div>
+	
+	
+	
+	
+	
+	
+	</div> 
+    </div>
+<!--Main Container ends here-->
+
+
+</body>
+
+http://code.jquery.com/jquery-latest.min.js
+                //cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js
+                //cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js
+</html>
